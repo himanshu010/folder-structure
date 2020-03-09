@@ -1,9 +1,12 @@
 var fs = require('fs'),
  path=require('path');
- var spacing="";
+ var FolderNamesArray=[];
+ var FolderNamesArray1;
+//  var spacing="";
  function crawl(spacing,dir){
-
-     console.log(spacing+dir+"\n");
+    var folderName=path.basename(dir);
+    FolderNamesArray.push(folderName);
+    //  console.log(spacing+folderName+"\n");
      var files= fs.readdirSync(dir);
      for(var x in files){
          //ignored folders
@@ -16,3 +19,6 @@ var fs = require('fs'),
      }
  }
  crawl("",__dirname);
+ console.log(FolderNamesArray);
+// var dir=path.basename(__dirname);
+// console.log(dir);
