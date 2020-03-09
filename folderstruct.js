@@ -6,13 +6,13 @@ var fs = require('fs'),
      console.log(spacing+dir+"\n");
      var files= fs.readdirSync(dir);
      for(var x in files){
+         //ignored folders
+         if(files[x]!==".git"&&files[x]!=="New folder (2)"){
          var next = path.join(dir,files[x]);
          if (fs.lstatSync(next).isDirectory()===true) {
             crawl(spacing+"    ",next);
          }
-         else{
-            //  console.log('\t', next);
-         }
+        }
      }
  }
  crawl("",__dirname);
