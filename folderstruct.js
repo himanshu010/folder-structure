@@ -19,7 +19,7 @@ var spacing = "";
 function crawl(spacing, dir, level) {
   var folderName = path.basename(dir);
   FolderNamesArray.push(folderName);
-  console.log(spacing + "├───" + folderName + "\n");
+  console.log(spacing + "├───" + folderName+"<br>");
   var files = fs.readdirSync(dir);
   for (var x in files) {
     //ignored folders
