@@ -3,7 +3,7 @@ var path = require("path");
 var util = require("util");
 
 
-var logFile = fs.createWriteStream("log.md", { flags: "w" });
+var logFile = fs.createWriteStream("folder-structure.md", { flags: "w" });
 var logStdout = process.stdout;
 
 console.log = function() {
