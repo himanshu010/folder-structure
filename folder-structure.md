@@ -1,13 +1,13 @@
 # Folder Structue
 
 ```
-├───folder-structure
-    ├───himanshu
-        ├───New folder2-1
-        ├───New folder2-2
-    ├───New folder
-    ├───New folder (3)
-        ├───aa
-            ├───ss
-    ├───New folder (4)
+│___folder-structure
+│   │___himanshu
+│   │   │___New folder2-1
+│   │   │___New folder2-2
+│   │___New folder
+│   │___New folder (3)
+│   │   │___aa
+│   │   │   │___ss
+│   │___New folder (4)
 ```

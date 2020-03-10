@@ -14,20 +14,26 @@ console.error = console.log;
 
 
 var FolderNamesArray = [];
+var levels=[0];
 var level = 0;
 var spacing = "";
 console.log("# Folder Structue\n\n```")
 function crawl(spacing, dir, level) {
   var folderName = path.basename(dir);
   FolderNamesArray.push(folderName);
-  console.log(spacing + "├───" + folderName);
+  
+  // console.log(levels[levels.length-1]);
+  console.log(spacing + "│___" + folderName);
+  levels.push(level);
+
+
   var files = fs.readdirSync(dir);
   for (var x in files) {
     //ignored folders
     if (files[x] !== ".git" && files[x] !== "New folder (2)") {
       var next = path.join(dir, files[x]);
       if (fs.lstatSync(next).isDirectory() === true) {
-        crawl(spacing + "    ", next, level + 1);
+        crawl(spacing +"│" + "   ", next, level + 1);
       }
     }
   }
