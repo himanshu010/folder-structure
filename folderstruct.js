@@ -22,7 +22,7 @@ function crawl(spacing, dir, level) {
   var folderName = path.basename(dir);
   FolderNamesArray.push(folderName);
   
-  console.log(spacing + "│___" + folderName);
+  console.log(spacing + "├───" + folderName);
 
 
   var files = fs.readdirSync(dir);
