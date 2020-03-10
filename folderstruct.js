@@ -14,7 +14,7 @@ console.error = console.log;
 
 
 var FolderNamesArray = [];
-var levels=[0];
+// var levels=[0];
 var level = 0;
 var spacing = "";
 console.log("# Folder Structue\n\n```")
@@ -22,9 +22,7 @@ function crawl(spacing, dir, level) {
   var folderName = path.basename(dir);
   FolderNamesArray.push(folderName);
   
-  // console.log(levels[levels.length-1]);
   console.log(spacing + "│___" + folderName);
-  levels.push(level);
 
 
   var files = fs.readdirSync(dir);
