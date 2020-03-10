@@ -16,10 +16,11 @@ console.error = console.log;
 var FolderNamesArray = [];
 var level = 0;
 var spacing = "";
+console.log("# Folder Structue\n\n```")
 function crawl(spacing, dir, level) {
   var folderName = path.basename(dir);
   FolderNamesArray.push(folderName);
-  console.log(spacing + "├───" + folderName+"<br>");
+  console.log(spacing + "├───" + folderName);
   var files = fs.readdirSync(dir);
   for (var x in files) {
     //ignored folders
@@ -32,3 +33,4 @@ function crawl(spacing, dir, level) {
   }
 }
 crawl(spacing, __dirname, level);
+console.log("```");
